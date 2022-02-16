@@ -18,4 +18,18 @@ describe("Gilded Rose", function () {
 		]);
 	});
 
+	it("should lowers quality twice as fast after negative sell_in days", function () {
+		const items = [
+			new Item('+5 Dexterity Vest', 0, 20),
+			new Item('Elixir of the Mongoose', 0, 7)
+		];
+
+		const result = update_quality(items);
+
+		expect(result).toEqual([
+			new Item('+5 Dexterity Vest', -1, 18),
+			new Item('Elixir of the Mongoose', -1, 5)
+		]);
+	});
+
 });
