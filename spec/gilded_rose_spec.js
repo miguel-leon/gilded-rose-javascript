@@ -100,4 +100,22 @@ describe('Gilded Rose', function () {
 		]);
 	});
 
+	it('should increase quality of "Backstage passes", by 2 when there are 10 days or less and by 3 when there are 5 days or less but drops to 0 after the concert', function () {
+		const items = [
+			new Item('Backstage passes to a TAFKAL80ETC concert', 15, 20),
+			new Item('Backstage passes to a TAFKAL80ETC concert', 10, 20),
+			new Item('Backstage passes to a TAFKAL80ETC concert', 5, 20),
+			new Item('Backstage passes to a TAFKAL80ETC concert', 0, 20)
+		];
+
+		const result = update_quality(items);
+
+		expect(result).toEqual([
+			new Item('Backstage passes to a TAFKAL80ETC concert', 14, 21),
+			new Item('Backstage passes to a TAFKAL80ETC concert', 9, 22),
+			new Item('Backstage passes to a TAFKAL80ETC concert', 4, 23),
+			new Item('Backstage passes to a TAFKAL80ETC concert', -1, 0)
+		]);
+	});
+
 });
