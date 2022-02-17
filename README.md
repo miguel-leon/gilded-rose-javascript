@@ -1,3 +1,5 @@
+**To see the refactored version go to the [refactor branch](../../tree/refactor)!!!**
+
 Hi and welcome to team Gilded Rose.
 
 As you know, we are a small inn with a prime location in a prominent city ran
