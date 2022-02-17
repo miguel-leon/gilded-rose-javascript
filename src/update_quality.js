@@ -45,7 +45,7 @@ function update_quality(items, pass_again = true) {
 			}
 		}
 
-		if (items[i].name === 'Conjured' && pass_again) {
+		if (items[i].name.startsWith('Conjured') && pass_again) {
 			items[i].sell_in++;
 			items[i] = update_quality([items[i]], false)[0];
 		}
