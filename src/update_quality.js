@@ -1,8 +1,10 @@
 const strategyFactory = require('./update_quality_strategies');
 const TwiceAsFast = require('./update_quality_strategies/twice_as_fast');
+const Conjured = require('./update_quality_strategies/conjured');
 
 
 const available_strategies = [
+	Conjured,
 	TwiceAsFast
 ];
 
