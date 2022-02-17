@@ -1,4 +1,4 @@
-**To see the refactored version go to the [refactor branch](../../tree/refactor)!!!**
+**To see the unrefactored version go to the [unrefactored branch](../../tree/unrefactored)!!!**
 
 Hi and welcome to team Gilded Rose.
 
