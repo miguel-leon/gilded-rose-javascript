@@ -74,4 +74,18 @@ describe('Gilded Rose', function () {
 		]);
 	});
 
+	it('should never increase quality to more than 50', function () {
+		const items = [
+			new Item('Aged Brie', 4, 50),
+			new Item('Aged Brie', 0, 50)
+		];
+
+		const result = update_quality(items);
+
+		expect(result).toEqual([
+			new Item('Aged Brie', 3, 50),
+			new Item('Aged Brie', -1, 50)
+		]);
+	});
+
 });
