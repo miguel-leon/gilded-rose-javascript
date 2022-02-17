@@ -3,9 +3,11 @@ const TwiceAsFast = require('./update_quality_strategies/twice_as_fast');
 const Conjured = require('./update_quality_strategies/conjured');
 const Increases = require('./update_quality_strategies/increases');
 const Legendary = require('./update_quality_strategies/legendary');
+const BackstagePass = require('./update_quality_strategies/backstage_pass');
 
 
 const available_strategies = [
+	BackstagePass,
 	Legendary,
 	Increases,
 	Conjured,
