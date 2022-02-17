@@ -46,4 +46,18 @@ describe('Gilded Rose', function () {
 		]);
 	});
 
+	it('should never set the quality to a negative', function () {
+		const items = [
+			new Item('+5 Dexterity Vest', 4, 0),
+			new Item('Elixir of the Mongoose', 0, 0)
+		];
+
+		const result = update_quality(items);
+
+		expect(result).toEqual([
+			new Item('+5 Dexterity Vest', 3, 0),
+			new Item('Elixir of the Mongoose', -1, 0)
+		]);
+	});
+
 });
