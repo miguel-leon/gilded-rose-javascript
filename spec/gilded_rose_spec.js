@@ -88,4 +88,16 @@ describe('Gilded Rose', function () {
 		]);
 	});
 
+	it('should not change values for "Sulfuras"', function () {
+		const items = [
+			new Item('Sulfuras, Hand of Ragnaros', 0, 80)
+		];
+
+		const result = update_quality(items);
+
+		expect(result).toEqual([
+			new Item('Sulfuras, Hand of Ragnaros', 0, 80)
+		]);
+	});
+
 });
