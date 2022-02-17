@@ -17,7 +17,11 @@ function getStrategy(StrategyClass) {
 	return strategy;
 }
 
-function strategyFactory(item) {
+function strategyFactory(item, available_strategies) {
+	for (const StrategyClass of available_strategies) {
+		if (StrategyClass.match(item)) return getStrategy(StrategyClass);
+	}
+
 	return getStrategy(DefaultQualityStrategy);
 }
 
